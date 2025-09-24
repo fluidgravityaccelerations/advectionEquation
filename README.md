@@ -33,8 +33,8 @@ Open the main function of the language of your choice and run it. The script set
 
 All schemes use the usual notation:
 
-- spatial grid: $x_j = j\,\Delta x$, $j=0,\dots,N$ covering $[0,2\pi]$ (so $\Delta x = 2\pi/N$),
-- temporal grid: $t^n = t_0 + n\,\Delta t$, $n=0,\dots,M$,
+- spatial grid: $x_j = j\Delta x$, $j=0,\dots,N$ covering $[0,2\pi]$ (so $\Delta x = 2\pi/N$),
+- temporal grid: $t_n = t_0 + n \Delta t$, $n=0,\dots,M$,
 - discrete solution: $u_j^n \approx u(x_j,t^n)$,
 - Courant number: $\alpha = v\,\Delta t/\Delta x$.
 
