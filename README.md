@@ -29,7 +29,7 @@ Open the main function of the language of your choice and run it. The script set
 
 ---
 
-## Short description of each scheme (with formulas)
+## Short description of each scheme 
 
 All schemes use the usual notation:
 
