@@ -8,16 +8,16 @@ used to show the qualitative differences between **unstable** and **stable** dis
 
 ---
 
-## Repository contents
+## Repository functions
 
-- `propagatingFunction.m` — initial condition (Gaussian by default)
-- `explicitDownwind.m` — explicit *downwind* scheme (demonstrates instability)
-- `explicitUpwind.m` — explicit *upwind* scheme (first-order stable for the correct sign of \(v\))
-- `centeredDifference.m` — centered-in-space explicit scheme (second order in space, but *unstable* for pure advection)
-- `laxFriedrichsNoRightBoundary.m` — Lax–Friedrichs with a deliberately wrong right boundary (to show fictitious reflection)
-- `laxFriedrichs.m` — standard Lax–Friedrichs (stabilized version of centered-difference)
-- `leapFrog.m` — leap-frog scheme (second-order, non-dissipative)
-- `laxWendroff.m` — Lax–Wendroff (second-order accurate, dispersive)
+- `propagatingFunction` — initial condition (Gaussian by default) — it also represents the propagation solution to the equation
+- `explicitDownwind` — explicit *downwind* scheme (demonstrates instability)
+- `explicitUpwind` — explicit *upwind* scheme (first-order stable for the correct sign of \(v\))
+- `centeredDifference` — centered-in-space explicit scheme (second order in space, but *unstable* for pure advection)
+- `laxFriedrichsNoRightBoundary` — Lax–Friedrichs with a deliberately wrong right boundary (to show fictitious reflection)
+- `laxFriedrichs` — standard Lax–Friedrichs (stabilized version of centered-difference)
+- `leapFrog` — leap-frog scheme (second-order, non-dissipative)
+- `laxWendroff` — Lax–Wendroff (second-order accurate, dispersive)
 
 ---
 
