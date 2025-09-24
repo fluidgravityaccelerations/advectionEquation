@@ -10,7 +10,7 @@ used to show the qualitative differences between **unstable** and **stable** dis
 
 ## Repository functions
 
-- `propagatingFunction` — initial condition (Gaussian by default) — it also represents the propagation solution to the equation
+- `propagatingFunction` — initial condition (Gaussian by default) — it also represents the propagation solution to the equation, namely, the exact solution $u(x,t)=f(x-vt)$ s
 - `explicitDownwind` — explicit *downwind* scheme (demonstrates instability)
 - `explicitUpwind` — explicit *upwind* scheme (first-order stable for the correct sign of \(v\))
 - `centeredDifference` — centered-in-space explicit scheme (second order in space, but *unstable* for pure advection)
@@ -23,9 +23,9 @@ used to show the qualitative differences between **unstable** and **stable** dis
 
 ## How to run
 
-Open `Laboratory.m` in MATLAB and run it. The script sets default parameters (time interval, number of time/space steps, wave speed `v`) and calls the various solver routines. Each routine returns a matrix `u` of size `(M+1) x (N+1)` (time along rows, space along columns) and `uRef` containing the exact solution $u(x,t)=f(x-vt)$ sampled at the grid points.
+Open the main function of the language of your choice and run it. The script sets default parameters (time interval, number of time/space steps, wave speed `v`) and calls the various solver routines. Each routine returns a matrix `u` of size `(M+1) x (N+1)` (time along rows, space along columns) and `uRef` containing the exact solution $u(x,t)=f(x-vt)$ sampled at the grid points.
 
-> Note: several routines enforce a left boundary condition directly and do not implement a consistent right boundary condition (this is intentional in some files to demonstrate boundary artefacts). If you want full periodic behavior, you should use periodic indexing for the space grid (see suggestions below).
+> Note: several routines enforce a left boundary condition directly and do not implement a consistent right boundary condition (this is intentional in some files to demonstrate boundary artefacts). 
 
 ---
 
