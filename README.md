@@ -1,5 +1,3 @@
-# advectionEquation
-
 # 1D Linear Advection Numerical Schemes
 
 This repository contains MATLAB, Python, PyCUDA and CUDA implementations of several finite-difference schemes for the solution of the 1D **linear advection equation**
