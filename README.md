@@ -2,17 +2,16 @@
 
 # 1D Linear Advection Numerical Schemes
 
-This repository contains MATLAB implementations of several finite-difference schemes for the 1D **linear advection equation**
+This repository contains MATLAB, Python, PyCUDA and CUDA implementations of several finite-difference schemes for the solution of the 1D **linear advection equation**
 
-$$u_t + v\,u_x = 0, \qquad x\in(0,2\pi), \; t>0,$$
+$$u_t + v\;u_x = 0, \qquad x\in(0,2\pi), \; t>0,$$
 
-used in a teaching laboratory to show the qualitative differences between **unstable** and **stable** discretizations, and between **dissipative** and **dispersive** corrections. The code is organized so that a main script (`Laboratory.m`) runs a sequence of experiments and calls the subsidiary functions listed below.
+used to show the qualitative differences between **unstable** and **stable** discretizations, and between **dissipative** and **dispersive** corrections. 
 
 ---
 
 ## Repository contents
 
-- `Laboratory.m` — main driver (sets parameters, runs the experiments, creates plots)
 - `propagatingFunction.m` — initial condition (Gaussian by default)
 - `explicitDownwind.m` — explicit *downwind* scheme (demonstrates instability)
 - `explicitUpwind.m` — explicit *upwind* scheme (first-order stable for the correct sign of \(v\))
