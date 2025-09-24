@@ -4,9 +4,7 @@
 
 This repository contains MATLAB implementations of several finite-difference schemes for the 1D **linear advection equation**
 
-\[
-u_t + v\,u_x = 0, \qquad x\in(0,2\pi), \; t>0,
-\]
+$$u_t + v\,u_x = 0, \qquad x\in(0,2\pi), \; t>0,$$
 
 used in a teaching laboratory to show the qualitative differences between **unstable** and **stable** discretizations, and between **dissipative** and **dispersive** corrections. The code is organized so that a main script (`Laboratory.m`) runs a sequence of experiments and calls the subsidiary functions listed below.
 
