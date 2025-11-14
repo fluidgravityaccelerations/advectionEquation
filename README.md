@@ -11,8 +11,8 @@ used to show the qualitative differences between **unstable** and **stable** dis
 ## Repository functions
 
 - `propagatingFunction` — initial condition (Gaussian by default) — it also represents the propagation solution to the equation, namely, the exact solution $u(x,t)=f(x-vt)$ s
-- `explicitDownwind` — explicit *downwind* scheme (demonstrates instability)
-- `explicitUpwind` — explicit *upwind* scheme (first-order stable for the correct sign of \(v\))
+- `explicitDownwind` — explicit *downwind* scheme (demonstrates instability for $v<0$)
+- `explicitUpwind` — explicit *upwind* scheme (first-order stable for $v>0$)
 - `centeredDifference` — centered-in-space explicit scheme (second order in space, but *unstable* for pure advection)
 - `laxFriedrichsNoRightBoundary` — Lax–Friedrichs with a deliberately wrong right boundary (to show fictitious reflection)
 - `laxFriedrichs` — standard Lax–Friedrichs (stabilized version of centered-difference)
