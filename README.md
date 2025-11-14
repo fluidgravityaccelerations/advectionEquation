@@ -20,6 +20,18 @@ used to show the qualitative differences between **unstable** and **stable** dis
 
 ---
 
+## Repository notes
+
+| Scheme                                   | Stable?                                                        | Dissipative? | Dispersive? | Order of Accuracy               | Notes                                                               |
+| ---------------------------------------- | -------------------------------------------------------------- | ------------ | ----------- | ------------------------------- | ------------------------------------------------------------------- |
+| **Downwind**                             | ❌ Unstable                                                     | —            | —           | 1st order                       | Always unstable for v>0; violates upwinding requirement             |
+| **Upwind (Forward-Time Backward-Space)** | ✔️ Stable if CFL ( \alpha = v\frac{\Delta t}{\Delta x} \le 1 ) | ✔️ Yes       | ❌ No        | 1st order                       | Numerical diffusion; monotone scheme                                |
+| **Centered Difference (FTCS)**           | ❌ Unstable                                                     | —            | —           | 1st order in time, 2nd in space | Classic counterexample of instability                               |
+| **Lax–Friedrichs (LF)**                  | ✔️ Stable if CFL ( \alpha \le 1 )                              | ✔️ Strongly  | ✔️ Mildly   | 1st order                       | Very diffusive; robust but smears solution                          |
+| **Leapfrog**                             | ✔️ Stable if CFL ( \alpha \le 1 )                              | ❌ No         | ✔️ Strongly | 2nd order                       | Non-dissipative but oscillatory (odd–even decoupling)               |
+| **Lax–Wendroff (LW)**                    | ✔️ Stable if CFL ( \alpha \le 1 )                              | ❌ No         | ✔️ Yes      | 2nd order                       | Accurate but generates dispersive oscillations near discontinuities |
+
+
 ## How to run
 
 Open the main function of the language of your choice and run it. The script sets default parameters (time interval, number of time/space steps, wave speed `v`) and calls the various solver routines. Each routine returns a matrix `u` of size `(M+1) x (N+1)` (time along rows, space along columns) and `uRef` containing the exact solution $u(x,t)=f(x-vt)$ sampled at the grid points.
