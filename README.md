@@ -14,7 +14,6 @@ used to show the qualitative differences between **unstable** and **stable** dis
 - `explicitDownwind` — explicit *downwind* scheme (demonstrates instability for $v<0$)
 - `explicitUpwind` — explicit *upwind* scheme (first-order stable for $v>0$)
 - `centeredDifference` — centered-in-space explicit scheme (second order in space, but *unstable* for pure advection)
-- `laxFriedrichsNoRightBoundary` — Lax–Friedrichs with a deliberately wrong right boundary (to show fictitious reflection)
 - `laxFriedrichs` — standard Lax–Friedrichs (stabilized version of centered-difference)
 - `leapFrog` — leap-frog scheme (second-order, non-dissipative)
 - `laxWendroff` — Lax–Wendroff (second-order accurate, dispersive)
