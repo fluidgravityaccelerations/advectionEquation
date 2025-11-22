@@ -10,13 +10,13 @@ used to show the qualitative differences between **unstable** and **stable** dis
 
 ## Repository functions
 
-- `propagatingFunction` — initial condition (Gaussian by default) — it also represents the propagation solution to the equation, namely, the exact solution $u(x,t)=f(x-vt)$ s
-- `explicitDownwind` — explicit *downwind* scheme (demonstrates instability for $v>0$)
-- `explicitUpwind` — explicit *upwind* scheme (first-order stable for $v>0$)
-- `centeredDifference` — centered-in-space explicit scheme (second order in space, but *unstable* for pure advection)
-- `laxFriedrichs` — standard Lax–Friedrichs (stabilized version of centered-difference)
-- `leapFrog` — leap-frog scheme (second-order, non-dissipative)
-- `laxWendroff` — Lax–Wendroff (second-order accurate, dispersive)
+- `propagatingFunction` — initial condition (Gaussian by default) — it also represents the propagation solution to the equation, namely, the exact solution $u(x,t)=f(x-vt)$ 
+- `explicitDownwind` 
+- `explicitUpwind`
+- `centeredDifference`
+- `laxFriedrichs`
+- `leapFrog` 
+- `laxWendroff`
 
 ---
 
@@ -27,7 +27,7 @@ used to show the qualitative differences between **unstable** and **stable** dis
 | **Downwind**                             | ❌ Unstable                                                     | —            | —           | 1st order                       | Always unstable for v>0; violates upwinding requirement             |
 | **Upwind (Forward-Time Backward-Space)** | ✔️ Stable if CFL ( \alpha = v\frac{\Delta t}{\Delta x} \le 1 ) | ✔️ Yes       | ❌ No        | 1st order                       | Numerical diffusion; monotone scheme                                |
 | **Centered Difference (FTCS)**           | ❌ Unstable                                                     | —            | —           | 1st order in time, 2nd in space | Classic counterexample of instability                               |
-| **Lax–Friedrichs (LF)**                  | ✔️ Stable if CFL ( \alpha \le 1 )                              | ✔️ Strongly  | ✔️ Mildly   | 1st order                       | Very diffusive; robust but smears solution                          |
+| **Lax–Friedrichs (LF)**                  | ✔️ Stable if CFL ( \alpha \le 1 )                              | ✔️ Strongly  | ✔️ Mildly   | 1st order                       | Very diffusive; robust but smears solution (stabilized version of centered-difference)                         |
 | **Leapfrog**                             | ✔️ Stable if CFL ( \alpha \le 1 )                              | ❌ No         | ✔️ Strongly | 2nd order                       | Non-dissipative but oscillatory (odd–even decoupling)               |
 | **Lax–Wendroff (LW)**                    | ✔️ Stable if CFL ( \alpha \le 1 )                              | ❌ No         | ✔️ Yes      | 2nd order                       | Accurate but generates dispersive oscillations near discontinuities |
 
