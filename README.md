@@ -2,7 +2,7 @@
 
 This repository contains MATLAB, Python, PyCUDA and CUDA implementations of several finite-difference schemes for the solution of the 1D **linear advection equation**
 
-$$u_t + v u_x = 0, \qquad x\in(0,2\pi),  \quad  t>0,$$
+$$u_t + v u_x = 0, \qquad u=u(x,t), \qquad x\in(0,2\pi),  \quad  t>0,$$
 
 used to show the qualitative differences between **unstable** and **stable** discretizations, and between **dissipative** and **dispersive** corrections. 
 
